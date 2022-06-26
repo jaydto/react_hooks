@@ -1,0 +1,18 @@
+.container__item{
+    display: grid;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: [col1] 150px [col2] 2fr [col-end];
+    gap: 20px;
+    grid-template-areas: "a b"
+    "a b";
+}
+.grid__item1{
+    grid-area: a;
+    grid-template-rows: 100vh;
+
+}
+.grid__item2{   
+    grid-area: b;
+}

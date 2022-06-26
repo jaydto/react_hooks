@@ -1,0 +1,12 @@
+.slide-container{
+    height:30%;
+    width: 76vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.slide__size{
+    height: 200px;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,23 @@
+.movement{
+    position: relative;
+}
+.register{
+    background: url(../../images/library.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px);
+}
+.overlay{
+    position:absolute;
+    top:-700px;
+    height:600px;
+    margin-top: 50px;
+    /* left:50%; */
+    z-index: 2;
+}
+@media(max-width:1275px){
+    .overlay{
+        top:-660px;
+    }
+}

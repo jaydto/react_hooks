@@ -6,15 +6,19 @@ const Table = () => {
     fetch("http://localhost:3000/data",{
     headers:{
     "Content-Type":"application/json",
-    "Accept":"application/json"}})
+    "Accept":"application/json",
+  "Cache-Control":"cache"}})
     .then((response)=>response.json())
     .then((data)=>{
       setData(data);
-    },[])
-  })
+    })
+    .catch((err)=>{
+      console.log(err.message)
+    })
+  },[])
   return (
     <div >
-           <><h1 class="display-3 bg-dark text-center">Books in store</h1><table class="table table-striped">
+           <><h1 className="display-3 bg-dark text-center">Books in store</h1><table className="table table-striped">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -25,10 +29,10 @@ const Table = () => {
             </tr>
           </thead>
           <tbody>
-      {data.map((item)=>( 
+      {data.map((item, index)=>( 
 
-            <tr>
-              <th scope="row">{item.id}</th>
+            <tr key={index}>
+              <th scope="row" >{item.id}</th>
               <td>{item.name}</td>
               <td>{item.book}</td>
               <td>{item.price}</td>

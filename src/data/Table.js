@@ -32,7 +32,7 @@ const Table = () => {
       {data.map((item, index)=>( 
 
             <tr key={index}>
-              <th scope="row" >{item.id}</th>
+              <th scope="row" >{index}</th>
               <td>{item.name}</td>
               <td>{item.book}</td>
               <td>{item.price}</td>
